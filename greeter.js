@@ -10,10 +10,12 @@ class Greeter {
             greeting = `Good morning ${capitalisedName}`;
         } else if (hours >= 18 && hours < 22) {
             greeting = `Good evening ${capitalisedName}`;
+        } else if ((hours >= 22 && hours <= 23) || (hours >= 0 && hours < 6)) {
+            greeting = `Good night ${capitalisedName}`;
         } else {
             greeting = `Hello ${capitalisedName}`;
         }
-        
+
         return greeting;
     }
 }
