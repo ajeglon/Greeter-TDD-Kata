@@ -15,7 +15,7 @@ class Greeter {
         } else {
             greeting = `Hello ${capitalisedName}`;
         }
-
+        console.log(greeting);
         return greeting;
     }
 }
