@@ -16,7 +16,7 @@ describe('Greeter', () => {
     });
 
     //3. greet capitalizes the first letter of the name
-    test('should greet Hello <name> while trimming whitespace', () => {
+    test('should greet Hello <name> with capital letter of first letter', () => {
         const result = greeter.greet('      anthony     ');
         expect(result).toBe('Hello Anthony');
     });
