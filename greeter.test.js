@@ -26,6 +26,7 @@ describe('Greeter', () => {
     
         const result = greeter.greet('Anthony');
         expect(result).toBe('Hello Anthony');
+        expect(console.log).toHaveBeenCalledWith('Hello Anthony');
         // restores original Date constructor to avoid side effects on other tests
         global.Date = RealDate; 
 
@@ -39,6 +40,7 @@ describe('Greeter', () => {
     
         const result = greeter.greet('      Anthony     ');
         expect(result).toBe('Hello Anthony');
+        expect(console.log).toHaveBeenCalledWith('Hello Anthony');
         global.Date = RealDate; 
     });
 
@@ -51,6 +53,7 @@ describe('Greeter', () => {
 
         const result = greeter.greet('      anthony     ');
         expect(result).toBe('Hello Anthony');
+        expect(console.log).toHaveBeenCalledWith('Hello Anthony');
         global.Date = RealDate;
     });
 
@@ -63,6 +66,7 @@ describe('Greeter', () => {
     
         const result = greeter.greet('      anthony     ');
         expect(result).toBe('Good morning Anthony');
+        expect(console.log).toHaveBeenCalledWith('Good morning Anthony');
         global.Date = RealDate; 
     });
 
@@ -75,6 +79,7 @@ describe('Greeter', () => {
     
         const result = greeter.greet('      anthony     ');
         expect(result).toBe('Good evening Anthony');
+        expect(console.log).toHaveBeenCalledWith('Good evening Anthony');
         global.Date = RealDate; 
     });
 
@@ -87,6 +92,7 @@ describe('Greeter', () => {
     
         const result = greeter.greet('      anthony     ');
         expect(result).toBe('Good night Anthony');
+        expect(console.log).toHaveBeenCalledWith('Good night Anthony');
         global.Date = RealDate; 
     });
 
