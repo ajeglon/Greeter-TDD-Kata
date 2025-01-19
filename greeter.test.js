@@ -1,5 +1,11 @@
+    
+const Greeter = require('./Greeter');
+
+describe('Greeter', () => {
+    let greeter = new Greeter();
+
     //1. Write a Greeter class with greet function that receives a name as input and outputs Hello <name> . The signature of greet should not change throughout the kata. You are allowed to construct Greeter object as you please.
-    test('should greet Hello with name entered', () => {
+    test('should greet Hello <name>', () => {
         const result = greeter.greet('Anthony');
         expect(result).toBe('Hello Anthony');
     });
@@ -14,3 +20,4 @@
     //6. greet returns Good night <name> when the time is 22:00-06:00
 
     //7. greet logs to console each time it is called
+});
