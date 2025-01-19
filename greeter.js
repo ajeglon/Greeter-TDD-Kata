@@ -1,6 +1,7 @@
 class Greeter {
     greet(name) {
-        const greeting = `Hello ${name}`;
+        const trimmedName = name.trim();
+        const greeting = `Hello ${trimmedName}`;
         return greeting;
     }
 }
