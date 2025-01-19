@@ -44,6 +44,11 @@ npx jest
 ```
 This will run the tests in the application and return the results in the command line.
 
+A small extension task for personal fun has been completed to make the Kata interactable for the user, this is on the branch:
+```commandline
+feature/extension-user-input-command-line
+```
+
 The application can be run using the following command in the command line:
 ```commandline
 node greeter.js
