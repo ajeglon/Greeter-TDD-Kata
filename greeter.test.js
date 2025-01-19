@@ -4,6 +4,16 @@ const Greeter = require('./Greeter');
 describe('Greeter', () => {
     let greeter = new Greeter();
 
+    beforeEach(() => {
+        greeter = new Greeter();
+        // Mock console.log
+        jest.spyOn(console, 'log').mockImplementation(() => {});
+    });
+
+    afterEach(() => {
+        jest.restoreAllMocks();
+    });
+
     //1. Write a Greeter class with greet function that receives a name as input and outputs Hello <name> . The signature of greet should not change throughout the kata. You are allowed to construct Greeter object as you please.
     test('should greet Hello <name>', () => {
         // Store data as a variable before mocking it
@@ -81,4 +91,15 @@ describe('Greeter', () => {
     });
 
     //7. greet logs to console each time it is called
+    test('should display greet message in console', () => {
+        const RealDate = Date;
+        global.Date = jest.fn(() => {
+            return new RealDate('2025-01-19T015:00:00Z');
+        });
+    
+        const result = greeter.greet('Anthony');
+        expect(result).toBe('Hello Anthony');
+        expect(console.log).toHaveBeenCalledWith('Hello Anthony');
+        global.Date = RealDate; 
+    });
 });
