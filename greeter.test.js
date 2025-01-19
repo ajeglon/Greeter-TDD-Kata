@@ -10,6 +10,10 @@ describe('Greeter', () => {
         expect(result).toBe('Hello Anthony');
     });
     //2. greet trims the input
+    test('should greet Hello <name> while trimming whitespace', () => {
+        const result = greeter.greet('      Anthony     ');
+        expect(result).toBe('Hello Anthony');
+    });
 
     //3. greet capitalizes the first letter of the name
 
