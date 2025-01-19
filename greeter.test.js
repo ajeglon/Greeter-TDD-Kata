@@ -16,6 +16,10 @@ describe('Greeter', () => {
     });
 
     //3. greet capitalizes the first letter of the name
+    test('should greet Hello <name> with capital letter of first letter', () => {
+        const result = greeter.greet('      anthony     ');
+        expect(result).toBe('Hello Anthony');
+    });
 
     //4. greet returns Good morning <name> when the time is 06:00-12:00
 
