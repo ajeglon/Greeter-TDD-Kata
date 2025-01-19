@@ -11,6 +11,8 @@ describe('Greeter', () => {
     });
 
     afterEach(() => {
+        // Closes readline
+        greeter.cleanup();
         jest.restoreAllMocks();
     });
 
