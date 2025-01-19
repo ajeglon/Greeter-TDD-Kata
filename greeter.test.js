@@ -1,5 +1,8 @@
     //1. Write a Greeter class with greet function that receives a name as input and outputs Hello <name> . The signature of greet should not change throughout the kata. You are allowed to construct Greeter object as you please.
-
+    test('should greet Hello with name entered', () => {
+        const result = greeter.greet('Anthony');
+        expect(result).toBe('Hello Anthony');
+    });
     //2. greet trims the input
 
     //3. greet capitalizes the first letter of the name
