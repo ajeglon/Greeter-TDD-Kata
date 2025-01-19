@@ -22,6 +22,11 @@ describe('Greeter', () => {
     });
 
     //4. greet returns Good morning <name> when the time is 06:00-12:00
+    test('should return "Good morning" between 06:00 and 12:00', () => {
+        jest.spyOn(global, 'Date').mockImplementation(() => new Date('2025-01-19T08:00:00Z'));
+        const result = greeter.greet('anthony');
+        expect(result).toBe('Good morning Anthony');
+    });
 
     //5. greet returns Good evening <name> when the time is 18:00-22:00
 
