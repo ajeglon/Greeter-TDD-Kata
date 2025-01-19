@@ -38,6 +38,20 @@ describe('Greeter', () => {
     });
 
     //5. greet returns Good evening <name> when the time is 18:00-22:00
+    test('should return "Good evening" between 18:00 and 22:00', () => {
+        // Store data as a variable before mocking it
+        const RealDate = Date;
+        // Mock the date 
+        global.Date = jest.fn(() => {
+            // Return the mocked date
+            return new RealDate('2025-01-19T20:00:00Z');
+        });
+    
+        const result = greeter.greet('      anthony     ');
+        expect(result).toBe('Good evening Anthony');
+        // restores original Date constructor to avoid side effects on other tests
+        global.Date = RealDate; 
+    });
 
     //6. greet returns Good night <name> when the time is 22:00-06:00
 
