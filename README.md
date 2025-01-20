@@ -11,7 +11,7 @@ If Node is installed, it will return the version number. i.e.
 v22.13.0
 ```
 
-If Node.js is not installed, it can be downloaded from https://nodejs.org/en/download/ or use the following command to install it:
+If Node.js is not installed or if the version is not 12.13 or higher, it can be downloaded from https://nodejs.org/en/download/ or use the following command to install it:
 ```commandline
 nvm install --lts
 ```
@@ -46,7 +46,7 @@ This will run the tests in the application and return the results in the command
 
 A small extension task for personal fun has been completed to make the Kata interactable for the user, this is on the branch:
 ```commandline
-feature/extension-user-input-command-line
+git checkout feature/extension-user-input-command-line
 ```
 
 The application can be run using the following command in the command line:
